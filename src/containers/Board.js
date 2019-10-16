@@ -18,7 +18,7 @@ class Board extends React.Component {
 
 
     componentDidMount() {
-      this.props.dispatch({type: 'START_GAME'});
+      this.props.startGame();
     }
     
     render() {
@@ -65,4 +65,4 @@ class Board extends React.Component {
     }
   }
 
-  export default connect(mapStateToProps)(Board)
+  export default connect(mapStateToProps, mapDispatchToProps)(Board)
