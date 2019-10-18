@@ -11,14 +11,15 @@ class Board extends React.Component {
     }
 
     renderBoard(){
+      
       return (this.props.board.map((num,index) => {
-        if (index===4 || index === 8 || index === 12 || index === 15) {
+        if (index === 0 ||index ===4 || index === 8 || index === 12 ) {
           return (
             <div className="board-row" key={index}>
-              <Square value={this.props.board[index-3]} id={index-3}/>
-              <Square value={this.props.board[index-2]} id={index-2}/>
-              <Square value={this.props.board[index-1]} id={index-1}/>
               <Square value={this.props.board[index]} id={index}/>
+              <Square value={this.props.board[index+1]} id={index+1}/>
+              <Square value={this.props.board[index+2]} id={index+2}/>
+              <Square value={this.props.board[index+3]} id={index+3}/>
             </div>
           )
         }
@@ -36,13 +37,13 @@ class Board extends React.Component {
 
     componentDidMount() {
       this.props.startGame();
+      
     }
     
     render() {
       return (
           
         <div>
-          {console.log(this.props.board)}
             {this.renderBoard()}
         </div>
       );
