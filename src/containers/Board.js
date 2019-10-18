@@ -39,6 +39,7 @@ class Board extends React.Component {
       this.props.startGame();
       
     }
+
     
     render() {
       return (

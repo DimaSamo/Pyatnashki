@@ -6,8 +6,16 @@ export default function boardReducer(state =  ["","1","2","3","4","5","6","7","8
         return shuffle([...state]);
    
       case "MOVE_SQUARE":
-        console.log(isMoveValid(state, action.index))
-        console.log(action.index)
+        // console.log(isMoveValid(state, action.index))
+        // console.log(action.index)
+        console.log(state.indexOf(""))
+        if (isMoveValid(state, action.index)) {
+          let newState = [...state]
+          let emptyIndex = state.indexOf("")
+          newState[emptyIndex] = state[action.index]
+          newState[action.index] = ""
+          return newState
+        }
         return [...state]
    
       default:
