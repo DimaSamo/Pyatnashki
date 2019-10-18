@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import moveSquare from '../actions/moveSquare'
 class Square extends React.Component {
+
+    handleOnClick = () => {
+      this.props.moveSquare(this.props.id)
+    }
+
     render() {
       return (
-        <button id={this.props.id} className="square" >
+        <button id={this.props.id} className="square" onClick={this.handleOnClick} >
           {this.props.value}
         </button>
       );
@@ -17,7 +22,7 @@ class Square extends React.Component {
 
   const mapDispatchToProps = dispatch => {
     return {
-      moveSquare: () => { dispatch(moveSquare()) }
+      moveSquare: (index) => { dispatch(moveSquare(index)) }
     }
   }
 
