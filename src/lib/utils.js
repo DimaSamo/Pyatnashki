@@ -8,19 +8,21 @@ export function shuffle (a) {
 
 export function isMoveValid(board, index){
     switch (true) {
-        case (board[index+1] === ""):
+        case (board[index+1] === " "):
             return true
             
-        case (board[index-1] === ""):
+        case (board[index-1] === " "):
             return true
             
-        case (board[index-4] === ""):
+        case (board[index-4] === " "):
             return true   
 
-        case (board[index+4] === ""):
+        case (board[index+4] === " "):
         return true 
     
         default:
             return false;
     }
 }
+
+export const winningBoard = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15", " "]

@@ -2,7 +2,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Square from '../components/Square'
+import Modal from '../components/gameFinish'
 import startGame from '../actions/startGame'
+import { winningBoard } from '../lib/utils'
 class Board extends React.Component {
   
 
@@ -11,7 +13,6 @@ class Board extends React.Component {
     }
 
     renderBoard(){
-      
       return (this.props.board.map((num,index) => {
         if (index === 0 ||index ===4 || index === 8 || index === 12 ) {
           return (
@@ -24,6 +25,15 @@ class Board extends React.Component {
           )
         }
       })).filter(function(e){return e})   
+    }
+
+    renderGameFinish(){
+      console.log(this.props.board)
+      console.log(winningBoard)
+      if (JSON.stringify(this.props.board)===JSON.stringify(winningBoard)) {
+        debugger;
+        return (<Modal />)
+      }
     }
 
      shuffle(a) {
@@ -46,6 +56,7 @@ class Board extends React.Component {
           
         <div>
             {this.renderBoard()}
+            {this.renderGameFinish()}
         </div>
       );
     }
