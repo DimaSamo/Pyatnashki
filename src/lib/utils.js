@@ -5,3 +5,22 @@ export function shuffle (a) {
     }
     return a;
 }
+
+export function isMoveValid(board, index){
+    switch (true) {
+        case (board[index+1] === ""):
+            return true
+            
+        case (board[index-1] === ""):
+            return true
+            
+        case (board[index-4] === ""):
+            return true   
+
+        case (board[index+4] === ""):
+        return true 
+    
+        default:
+            return false;
+    }
+}
