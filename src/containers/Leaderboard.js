@@ -1,18 +1,15 @@
+import React, { Component } from "react";
+import Container from "react-bootstrap/Container";
 
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-class Leaderboard extends React.Component {
- 
-    render() {
 
-      return (
-        <div>
-            Leaderboard component
-        </div>
-      );
-    }
+export default class Leaderboard extends Component {
+  render() {
+    return (
+      <Container
+        style={{ alignContent: "center", padding: "2em" }}>
+      
+        <p> Leaderboard asdasdasdasdasd</p>
+      </Container>
+    );
   }
-
-
-
-  export default Leaderboard
+}

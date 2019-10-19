@@ -10,7 +10,7 @@ import Leaderboard from './containers/Leaderboard';
 
 function App() {
   return (
-    <div className="App game">
+    <div className="App">
       <Router>
         <NavBar/>
         <Route exact path="/" component={Game} />

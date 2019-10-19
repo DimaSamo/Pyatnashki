@@ -1,18 +1,15 @@
+import React, { Component } from "react";
+import Container from "react-bootstrap/Container";
 
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-class About extends React.Component {
- 
-    render() {
 
-      return (
-        <div>
-            xdxdxdxdxd
-        </div>
-      );
-    }
+export default class About extends Component {
+  render() {
+    return (
+      <Container
+        style={{ alignContent: "center", padding: "2em" }}>
+      
+        <p>sdfgsdfgsdfgsdfg</p>
+      </Container>
+    );
   }
-
-
-
-  export default About
+}

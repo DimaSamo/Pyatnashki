@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import Square from '../components/Square'
 import GameFinish from '../components/gameFinish'
@@ -26,7 +26,6 @@ class Board extends React.Component {
       console.log(this.props.board)
       console.log(winningBoard)
       if (JSON.stringify(this.props.board)===JSON.stringify(winningBoard)) {
-        debugger;
         return (<GameFinish />)
       }
     }
@@ -40,7 +39,7 @@ class Board extends React.Component {
     render() {
       return (
           
-        <div>
+        <div className="game">
             {this.renderBoard()}
             {this.renderGameFinish()}
         </div>
