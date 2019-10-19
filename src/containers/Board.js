@@ -2,15 +2,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Square from '../components/Square'
-import Modal from '../components/gameFinish'
+import GameFinish from '../components/gameFinish'
 import startGame from '../actions/startGame'
 import { winningBoard } from '../lib/utils'
 class Board extends React.Component {
-  
-
-    renderSquare(i) {
-      return <Square value={i} />;
-    }
 
     renderBoard(){
       return (this.props.board.map((num,index) => {
@@ -32,18 +27,9 @@ class Board extends React.Component {
       console.log(winningBoard)
       if (JSON.stringify(this.props.board)===JSON.stringify(winningBoard)) {
         debugger;
-        return (<Modal />)
+        return (<GameFinish />)
       }
     }
-
-     shuffle(a) {
-        for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
-        }
-        return a;
-    }
-
 
     componentDidMount() {
       this.props.startGame();
