@@ -3,6 +3,7 @@ import React from "react";
 
 const AboutContent = () => (
   <>
+  <h1>About:</h1>
     <p>
       This 15 Puzzle board game, is my final project for the Flatiron School Online Coding Bootcamp.
     </p>

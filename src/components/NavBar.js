@@ -15,6 +15,10 @@ const NavBar = () => (
             Leaderboard
         </Link>
 
+        <Link className="nav-link" to="/instructions">
+            Instructions
+        </Link>
+
         <Link className="nav-link" to="/about">
             About
         </Link>
