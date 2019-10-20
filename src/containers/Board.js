@@ -2,10 +2,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Square from '../components/Square'
-import MyModal from '../components/gameFinish'
+
 import startGame from '../actions/startGame'
-import { winningBoard } from '../lib/utils'
-import { isGameWon } from '../lib/utils'
+
 class Board extends React.Component {
 
     renderBoard(){
@@ -23,10 +22,10 @@ class Board extends React.Component {
       })).filter(function(e){return e})   
     }
 
-    componentDidMount() {
-      this.props.startGame();
+    // componentDidMount() {
+    //   this.props.startGame();
       
-    }
+    // }
 
     
     render() {

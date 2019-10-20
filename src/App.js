@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import Game from './containers/Game'
 import About from './containers/About'
 import NavBar from './components/NavBar'
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import Leaderboard from './containers/Leaderboard';
 
 function App() {

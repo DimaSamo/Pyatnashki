@@ -1,9 +1,8 @@
 
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import Board from './Board'
 import Moves from '../components/Moves'
-import { winningBoard } from '../lib/utils'
 import { isGameWon } from '../lib/utils'
 import MyModal from '../components/gameFinish'
 import startGame from '../actions/startGame'
@@ -14,7 +13,7 @@ class Game extends React.Component {
   renderGameFinish(){
     if (isGameWon(this.props.board)) {
       // return <p>GAME WON</p>
-      return (<MyModal show={isGameWon(this.props.board)} onHide={this.resetGame.bind(this)}/>)
+      return (<MyModal show={isGameWon(this.props.board)} onHide={this.resetGame.bind(this)} moves={this.props.moves}/>)
     }
   }
 
@@ -42,7 +41,7 @@ class Game extends React.Component {
   }
 
   const mapStateToProps = (state) => {
-    return { board: state.board };
+    return { board: state.board, moves: state.moves };
   };
 
   export default connect(mapStateToProps, mapDispatchToProps)(Game)
