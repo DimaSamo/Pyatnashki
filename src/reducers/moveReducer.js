@@ -1,4 +1,4 @@
-import { shuffle, isMoveValid } from '../lib/utils'
+import { isMoveValid } from '../lib/utils'
 
 export default function moveReducer(state =  0, action) {
     switch (action.type) {

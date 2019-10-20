@@ -23,11 +23,6 @@ class Board extends React.Component {
       })).filter(function(e){return e})   
     }
 
-    onGameFinish(){
-      this.props.startGame()
-      this.props.resetMoves()
-    }
-
     componentDidMount() {
       this.props.startGame();
       
