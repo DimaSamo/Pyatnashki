@@ -5,6 +5,7 @@ import Board from './Board'
 import Moves from '../components/Moves'
 import { isGameWon } from '../lib/utils'
 import MyModal from '../components/gameFinish'
+import RestartButton from '../components/RestartButton'
 import startGame from '../actions/startGame'
 import resetMoves from '../actions/resetMoves'
 class Game extends React.Component {
@@ -28,6 +29,7 @@ class Game extends React.Component {
             <Board/>
             <Moves />
             {this.renderGameFinish()}
+            <RestartButton onClick={this.resetGame.bind(this)}/>
         </div>
       );
     }
