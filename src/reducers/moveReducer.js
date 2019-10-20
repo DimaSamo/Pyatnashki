@@ -8,6 +8,9 @@ export default function moveReducer(state =  0, action) {
         }
         return state;
 
+        case "RESET_MOVES":
+            return state=0;
+
       default:
         return state;
     }

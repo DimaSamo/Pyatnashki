@@ -23,13 +23,9 @@ class Board extends React.Component {
       })).filter(function(e){return e})   
     }
 
-    renderGameFinish(){
-      console.log(this.props.board)
-      console.log(winningBoard)
-      if (isGameWon(this.props.board)) {
-        return <p>GAME WON</p>
-        return (<MyModal show={true} />)
-      }
+    onGameFinish(){
+      this.props.startGame()
+      this.props.resetMoves()
     }
 
     componentDidMount() {
@@ -43,8 +39,6 @@ class Board extends React.Component {
           
         <div className="game">
             {this.renderBoard()}
-            <br/>
-            {this.renderGameFinish()}
         </div>
       );
     }
