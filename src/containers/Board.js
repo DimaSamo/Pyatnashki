@@ -2,9 +2,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Square from '../components/Square'
-import GameFinish from '../components/gameFinish'
+import MyModal from '../components/gameFinish'
 import startGame from '../actions/startGame'
 import { winningBoard } from '../lib/utils'
+import { isGameWon } from '../lib/utils'
 class Board extends React.Component {
 
     renderBoard(){
@@ -25,8 +26,9 @@ class Board extends React.Component {
     renderGameFinish(){
       console.log(this.props.board)
       console.log(winningBoard)
-      if (JSON.stringify(this.props.board)===JSON.stringify(winningBoard)) {
-        return (<GameFinish />)
+      if (isGameWon(this.props.board)) {
+        return <p>GAME WON</p>
+        return (<MyModal show={true} />)
       }
     }
 

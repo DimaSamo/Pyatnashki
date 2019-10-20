@@ -25,4 +25,12 @@ export function isMoveValid(board, index){
     }
 }
 
+export function isGameWon(board){
+    if (JSON.stringify(board)===JSON.stringify(winningBoard)) {
+        return true;
+      }
+      return false
+}
+
+
 export const winningBoard = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15", " "]
