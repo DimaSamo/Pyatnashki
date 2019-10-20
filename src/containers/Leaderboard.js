@@ -7,7 +7,7 @@ import Table from 'react-bootstrap/Table'
  class Leaderboard extends Component {
   render() {
     const entries = this.props.leaderboard.entries.map((entry, index) => {return     (
-        <tbody>
+        <tbody key={index}>
         <tr>
             <td>{index+1}</td>
             <td>{entry.name}</td>

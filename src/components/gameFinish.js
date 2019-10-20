@@ -1,6 +1,8 @@
 import React from "react";
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import ScoreForm from "./ScoreForm";
+
 
 function MyModal(props) {
     return (
@@ -12,16 +14,12 @@ function MyModal(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-          Congratulations, You've Won!
+          Submit your score!
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>You won in {props.moves} moves, and 26 seconds!</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
+          <h4>You won in {props.moves} moves!</h4>
+          <ScoreForm moves={props.moves}/>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
