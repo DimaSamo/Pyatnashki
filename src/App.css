@@ -65,3 +65,13 @@
 .game-info {
   margin-left: 20px;
 }
+
+.moves {
+  width: 120px;
+  height: 45px;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 180px 0 0 810px;
+}

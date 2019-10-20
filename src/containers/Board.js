@@ -41,6 +41,7 @@ class Board extends React.Component {
           
         <div className="game">
             {this.renderBoard()}
+            <br/>
             {this.renderGameFinish()}
         </div>
       );

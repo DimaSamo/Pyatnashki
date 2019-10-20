@@ -1,7 +1,7 @@
 import React from "react";
 import Popup from "reactjs-popup";
 export default () => (
-  <Popup trigger={<button className="button"> Submit Score </button>} modal>
+  <Popup trigger={<button className="btn btn-success"> Submit Score </button>} modal>
     {close => (
       <div className="modal">
         <a className="close" onClick={close}>
